@@ -1,22 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
-import MyComponent from './MyComponent';
+import React, { Component } from "react";
+import EventPractice from "./EventPractice";
+import IterationSample from "./IterationSample";
+import ScrollBox from "./ScrollBox";
 
-function App() {
-  const text="민정";
-  const condition=true;
-  const style={
-    backgroundColor:'gray',
-    border: '1px solid black',
-    height: Math.round(Math.random()*300)+50,
-    width: Math.round(Math.random()*300)+50,
-    WebkitTransition: 'all',
-    MozTransition:'all',
-    msTransition:'all'
-  }
-  return (
-    <MyComponent name="이민정" age={22}/>
-  );
+class App extends Component {
+    render() {
+        return (
+            /*
+            <div>
+                <ScrollBox ref={(ref) => (this.ScrollBox = ref)} />
+                <button
+                    onClick={() => {
+                        this.ScrollBox.scrollToBottom();
+                    }}
+                >
+                    to Bottom
+                </button>
+            </div>
+            */
+            <IterationSample />
+        );
+    }
 }
 
 export default App;
