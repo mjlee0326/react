@@ -1,24 +1,20 @@
 import React, { Component } from "react";
-import EventPractice from "./EventPractice";
-import IterationSample from "./IterationSample";
-import ScrollBox from "./ScrollBox";
+import logo from "./logo.svg";
+import "./App.css";
 
 class App extends Component {
     render() {
         return (
-            /*
-            <div>
-                <ScrollBox ref={(ref) => (this.ScrollBox = ref)} />
-                <button
-                    onClick={() => {
-                        this.ScrollBox.scrollToBottom();
-                    }}
-                >
-                    to Bottom
-                </button>
+            <div className="App">
+                <div className="App-header">
+                    <img src={logo} className="App-logo" alt="logo" />
+                    <h2>Welcome to React</h2>
+                </div>
+                <p className="App-intro">
+                    To get started, edit <code>src/app.js</code> and save to
+                    reload.
+                </p>
             </div>
-            */
-            <IterationSample />
         );
     }
 }
