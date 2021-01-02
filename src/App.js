@@ -1,19 +1,21 @@
 import React, { Component } from "react";
-import logo from "./logo.svg";
-import "./App.css";
+import styles from "./App.module.scss";
+import classNames from "classnames/bind";
+const cx = classNames.bind(styles);
+
+console.log(styles);
 
 class App extends Component {
     render() {
+        const isBlue = true;
+
         return (
-            <div className="App">
-                <div className="App-header">
-                    <img src={logo} className="App-logo" alt="logo" />
-                    <h2>Welcome to React</h2>
-                </div>
-                <p className="App-intro">
-                    To get started, edit <code>src/app.js</code> and save to
-                    reload.
-                </p>
+            <div
+                className={cx("box", {
+                    blue: isBlue,
+                })}
+            >
+                <div className={cx("box-inside")} />
             </div>
         );
     }
