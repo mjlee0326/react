@@ -1,7 +1,22 @@
-import React from "react";
+import React, { Component } from 'react'
+import styles from "./TodoItem.scss";
+import classNames from 'classnames/bind';
 
-const TodoItem = () => {
-    return <div></div>;
-};
+const cx = classNames.bind(styles);
+
+class TodoItem extends Component {
+    render() {
+        //this.props...
+        const {done, children, onToggle, onRemove} = this.props;
+        
+        return (
+            <div className={cx('todo-item')} onClick={onToggle}>
+               <input className={cx('tick')} type="checkbox" checked={done} readOnly/>
+               <div className={cx('text', {done})}>{children}</div> 
+               <div className={cx('delete')} onClick={onRemove}>[Remove]</div>
+            </div>
+        );
+    }
+}
 
 export default TodoItem;
