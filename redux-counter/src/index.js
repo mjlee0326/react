@@ -4,10 +4,19 @@ import './index.css';
 import App from './containers/App';
 import reportWebVitals from './reportWebVitals';
 
+//redux
+import {createStore} from 'redux';
+import reducers from './reducers';
+import {Provider} from 'react-redux';
+
+//create store
+const store = createStore(reducers);
+
 ReactDOM.render(
-  <React.StrictMode>
+  <Provider store={store}>
     <App />
-  </React.StrictMode>,
+  </Provider>,
+
   document.getElementById('root')
 );
 
