@@ -1,5 +1,17 @@
-import * as types from '../actions/ActionTypes';
+import number from "./number";
+import color from "./color";
 
+import { combineReducers } from "redux";
+
+const reducers = combineReducers({
+    numberData: number,
+    colorData: color,
+});
+
+export default reducers;
+
+/*
+import * as types from '../actions/ActionTypes';
 const initialState = {
     clor: 'black',
     number: 0
@@ -30,3 +42,4 @@ function counter(state=initialState, action){
 }
 
 export default counter;
+*/
