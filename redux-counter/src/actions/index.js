@@ -1,6 +1,7 @@
 import * as types from "./ActionTypes";
 //INCREMENT, DECREMENT, SET_COLOR action이 특정 카운터를
 //조작할 수 있도록 설정해야 하므로 index 값을 액션 객체에 포함
+//uu
 
 export const increment = () => ({
     type: types.INCREMENT,
