@@ -22,7 +22,11 @@ Buttons.PropTypes = {
 };
 
 Buttons.defaultProps = {
-    onCreate: () => console.warn("onCreate not defined"),
-    onRemove: () => console.warn("onRemove not defined"),
+    onCreate: () => {
+        console.warn("onCreate not defined");
+    },
+    onRemove: () => {
+        console.warn("onRemove not defined");
+    },
 };
 export default Button;
